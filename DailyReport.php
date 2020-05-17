@@ -17,6 +17,8 @@
         <dd><input type="text" class="formTextComponents" name="name" value=""></dd>
         <dt>作業内容:</dt>
         <dd><textarea class="formTextComponents" rows="3" name="task" value=""></textarea></dd>
+        <dt>連絡事項:</dt>
+        <dd><textarea class="formTextComponents" rows="3" name="memo" value=""></textarea></dd>
         <dt></dt>
         <dd><input type="submit" class="formSubmitButton" name="submitButton" value="作成ボタン"></dd>
       </dl>
