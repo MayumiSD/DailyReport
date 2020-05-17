@@ -9,7 +9,7 @@
 
   <body>
     <h1>日報入力システム</h1>
-    <form action="createnippo.php" method="POST">
+    <form action="DailyReport.php" method="POST">
       <dl>
         <dt>日付:</dt>
         <dd><input type="text" class="formTextComponents" name="date" value=""></dd>
@@ -24,13 +24,41 @@
       </dl>
       
       <?php
-      $date=$_POST['date'];
-      $name=$_POST['name'];
-      $task=$_POST['task'];
-      $task=$_POST['memo'];
-      if(isset($_POST['date']) && isset($_POST['name']) && isset($_POST['task'])){
-        echo "$date\n"&"$name\n"&"$task\n"; 
+
+      if(empty($_POST['date'])){
+         $dateErr="日付\n";
       }
+      else {
+        $date=$_POST['date'];
+      }
+
+      if(empty($_POST['name'])){
+          $nameErr="名前\n";
+         }
+      else{
+        $name=$_POST['name'];
+      }
+
+      if(empty($_POST['task'])){
+        $taskErr="作業内容\n"; 
+        }
+      else{
+        $task=$_POST['task'];
+      }
+
+      if(isset($_POST['memo'])){
+        $memo=$_POST['memo'];
+      }
+
+      if(empty($_POST['date']) || empty($_POST['name']) || empty($_POST['task'])){
+        echo $dateErr.$nameErr.$taskErr."を入力ください";
+      }  
+      else{
+        $str="$date\n.$name\n.$task\n.$memo\n"; 
+        $str= nl2br($str);
+        echo $str;
+      }
+
       ?>
     </form>
   </body>
