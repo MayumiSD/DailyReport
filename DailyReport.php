@@ -27,8 +27,9 @@
       $date=$_POST['date'];
       $name=$_POST['name'];
       $task=$_POST['task'];
+      $task=$_POST['memo'];
       if(isset($_POST['date']) && isset($_POST['name']) && isset($_POST['task'])){
-        echo $date.$name.$task; 
+        echo "$date\n"&"$name\n"&"$task\n"; 
       }
       ?>
     </form>
