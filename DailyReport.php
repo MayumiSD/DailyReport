@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./nippostylesheet.css">
    </head>
 
+   
+
   <body>
     <h1>日報入力システム</h1>
     <form action="createnippo.php" method="POST">
