@@ -10,6 +10,7 @@ dt {
     display: block;
     margin-inline-start: 40px;
   }
+  
   input {
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
